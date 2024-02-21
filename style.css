@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
-@media screen and (min-width: 768px) 
+
 :root {
     --cor-de-fundo: #000000;
     --verde: #6FFF57;
@@ -45,21 +45,34 @@ body {
     font-size: 18px;
     align-items: center;
     width: 100%;
-
-    .botoes {
-        display: block;
-    }
+    border-bottom: 4px solid var(--botao-ativo); 
+    border-left: 2px solid var(--botao-ativo); 
+    border-right: 2px solid var(--botao-ativo); 
+    border-top: none;
+}
 
 .botoes {
-    display: flex;
+    display: block;
 }
-        
-.botao:first-child {
-    border-radius: 40px 0 0 0;
-}
-        
-.botao:last-child {
-     border-radius: 0 40px 0 0;
-}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+    .botao:first-child {
+        border-radius: 40px 40px 0 0;
+    
+    @media screen and (min-width: 768px) {
+        .botoes {
+            display: flex;
         }
-        
+    
+        .botao:first-child {
+            border-radius: 40px 0 0 0;
+        }
+    
+        .botao:last-child {
+            border-radius: 0 40px 0 0;
+        }
+    }
+    
